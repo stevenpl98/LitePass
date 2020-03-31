@@ -28,19 +28,20 @@
                 {  
                     session_start();  
                     $_SESSION['sess_user']=$user;  
-  
-                    /* Redirect browser */  
-                    header("Location: ../credentials.html");  
+                    
+                    echo '<script>alert("Welcome!")</script>';
+                    /* Redirect browser */ 
+                    echo '<script>location.href= "../credentials.php";</script>';  
                 }  
             //wrong password
             } 
             else 
             {  
-                echo "Invalid username or password!"; 
+                echo '<script>alert("User not found!")</script>';
                 /* Redirect browser */  
-                header("Location: ../login.html");   
+                echo '<script>location.href= "../login.html";</script>';
             }  
-  
+            //close_db($conn);
         } 
         //empty fields
         else 

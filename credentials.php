@@ -17,15 +17,16 @@
 </head>
 
 <body>
+    <? include 'scripts/start.php' ?>
     <div id="page-container">
         <div id="content-wrap">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="login.html">Login/Create Account</a>
-                <a href="home.html">Home</a>
-                <a href="credentials.html">Credentials</a>
+                <a href="home.php">Home</a>
+                <a href="credentials.php">Credentials</a>
                 <a href="index.html">About</a>
-                <a href="#">Logout</a>
+                <a href="scripts/logout.php">Logout</a>
             </div>
 
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>

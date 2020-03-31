@@ -27,34 +27,34 @@
                 $result = $conn->query($sql);  
                 if($result)
                 {  
-                    echo "Account Successfully Created";
+                    echo '<script>alert("Acccount Succesfully Created!")</script>';
                     /* Redirect browser */  
-                    header("Location: ../login.html");  
+                    echo '<script>location.href= "../login.html";</script>';  
                 }
                 //not complete 
                 else 
                 {  
-                    echo "Failure!"; 
+                    echo '<script>alert("Failure!")</script>';
                     /* Redirect browser */  
-                    header("Location: ../login.html");   
+                    echo '<script>location.href= "../login.html";</script>';  
                 }  
   
             } 
             //username already exists
             else 
             {  
-                echo "That username already exists! Please try again with another.";
+                echo '<script>alert("That username already exists! Please try again with another.")</script>';
                 /* Redirect browser */  
-                header("Location: ../login.html");    
+                echo '<script>location.href= "../login.html";</script>';    
             }  
-  
+            close_db($conn);
         } 
         //empty fields
         else 
         {  
-            echo "All fields are required!";
+            echo '<script>alert("All fields are required!")</script>';
             /* Redirect browser */  
-            header("Location: ../login.html");    
+            echo '<script>location.href= "../login.html";</script>';     
         }  
     }  
 ?>  
