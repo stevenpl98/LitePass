@@ -2,11 +2,11 @@
     //post submitted
     if(isset($_POST["submit"]))
     {
-        //user and pass fields not empty  
-        if(!empty($_POST['user']) && !empty($_POST['pass'])) 
+        //email and pass fields not empty  
+        if(!empty($_POST['email']) && !empty($_POST['pass'])) 
         {  
-            //credentials input from user
-            $user = $_POST['user'];  
+            //credentials input from email
+            $email = $_POST['email'];  
             $pass = $_POST['pass'];  
 
             //connect to db
@@ -14,15 +14,15 @@
             $conn = connect_db(); 
   
             //lookup username in case already exists
-            $sql = "SELECT * FROM login WHERE username='".$user."'";  
+            $sql = "SELECT * FROM login WHERE email='".$email."'";  
             $sql = $conn->query($sql);
             $sql = $sql->fetch_assoc(); 
             
-            //user not found 
+            //email not found 
             if(!$sql)
             {  
-                // attempt to add user
-                $sql = "INSERT INTO login(username,password) VALUES('$user','$pass')";  
+                // attempt to add email
+                $sql = "INSERT INTO login(email,password) VALUES('$email','$pass')";  
   
                 $result = $conn->query($sql);  
                 if($result)
@@ -40,10 +40,10 @@
                 }  
   
             } 
-            //username already exists
+            //email already exists
             else 
             {  
-                echo '<script>alert("That username already exists! Please try again with another.")</script>';
+                echo '<script>alert("That email already exists! Please try again with another.")</script>';
                 /* Redirect browser */  
                 echo '<script>location.href= "../login.html";</script>';    
             }  
