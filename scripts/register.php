@@ -1,4 +1,6 @@
 <?php 
+    $sql_database="litepass-users";
+
     //post submitted
     if(isset($_POST["submit"]))
     {
@@ -11,7 +13,7 @@
 
             //connect to db
             require 'db.php';
-            $conn = connect_db(); 
+            $conn = connect_db($sql_database); 
   
             //lookup username in case already exists
             $sql = "SELECT * FROM login WHERE email='".$email."'";  

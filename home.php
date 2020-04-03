@@ -26,7 +26,7 @@
                 <a href="home.php">Home</a>
                 <a href="credentials.php">Credentials</a>
                 <a href="index.html">About</a>
-                <a href="#scripts/logout.php">Logout</a>
+                <a href="scripts/logout.php">Logout</a>
             </div>
 
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -41,31 +41,31 @@
                     <div id="NewCreds">
                         <h1>Add New Credentials</h1>
 
-                        <form action="/" method="post">
+                        <form action="scripts/add.php" method="post">
 
                         
 							<div class="field-wrap">
                                 <label>
                                     Site/App<span class="req">*</span>
                                 </label>
-                                <input type="name" required autocomplete="off" />
+                                <input type="name" required autocomplete="off" name="siteApp"/>
                             </div>
 							
                             <div class="field-wrap">
                                 <label>
-                                    Login Email<span class="req">*</span>
+                                    Username or Email<span class="req">*</span>
                                 </label>
-                                <input type="email" required autocomplete="off" />
+                                <input type="text" required autocomplete="off" name="user"/>
                             </div>
 
                             <div class="field-wrap">
                                 <label>
                                     Site Password<span class="req">*</span>
                                 </label>
-                                <input type="password" required autocomplete="off" />
+                                <input type="password" required autocomplete="off" name="pass"/>
                             </div>
 
-                            <button type="submit" class="button button-block" />Add Credentials</button>
+                            <button type="submit" class="button button-block" name="submit"/>Add Credentials</button>
 
                         </form>
 

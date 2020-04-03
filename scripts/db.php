@@ -3,10 +3,9 @@
     $sql_host="localhost";
     $sql_username="root";
     $sql_password='pass';
-    $sql_database="litepass-users";
     $conn = "";
 
-    function connect_db() 
+    function connect_db($sql_database) 
     {
         global $sql_host, $sql_username, $sql_password, $sql_database;
         global $conn;

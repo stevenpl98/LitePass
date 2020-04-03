@@ -9,5 +9,10 @@
         //exit();
     }
 
+    function getSessionID()
+    {
+        return $_SESSION['sess_user'];
+    }
+
     /*<? include 'scripts/start.php' ?> */ //Use in any page right under body tag - *Must convert html file to php*
 ?>

@@ -1,4 +1,6 @@
 <?php  
+    $sql_database="litepass-users";
+
     //post submitted
     if(isset($_POST["submit"]))
     {  
@@ -11,7 +13,7 @@
             
             //connect to db
             require 'db.php';
-            $conn = connect_db();  
+            $conn = connect_db($sql_database);  
             
             //lookup users
             $sql = "SELECT * FROM login WHERE email='".$email."' AND password='".$pass."'";  
@@ -41,7 +43,7 @@
                 /* Redirect browser */  
                 echo '<script>location.href= "../login.html";</script>';
             }  
-            //close_db($conn);
+            close_db($conn);
         } 
         //empty fields
         else 
