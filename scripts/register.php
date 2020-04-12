@@ -29,16 +29,16 @@
                 $result = $conn->query($sql);  
                 if($result)
                 {  
-                    echo '<script>alert("Acccount Succesfully Created!")</script>';
+                    echo '<script>alert("Acccount Succesfully Added!")</script>';
                     /* Redirect browser */  
-                    echo '<script>location.href= "../login.html";</script>';  
+                    echo '<script>location.href= "../login.php";</script>';  
                 }
                 //not complete 
                 else 
                 {  
                     echo '<script>alert("Failure!")</script>';
                     /* Redirect browser */  
-                    echo '<script>location.href= "../login.html";</script>';  
+                    echo '<script>location.href= "../login.php";</script>';  
                 }  
   
             } 
@@ -47,7 +47,7 @@
             {  
                 echo '<script>alert("That email already exists! Please try again with another.")</script>';
                 /* Redirect browser */  
-                echo '<script>location.href= "../login.html";</script>';    
+                echo '<script>location.href= "../login.php";</script>';    
             }  
             close_db($conn);
         } 
@@ -56,7 +56,7 @@
         {  
             echo '<script>alert("All fields are required!")</script>';
             /* Redirect browser */  
-            echo '<script>location.href= "../login.html";</script>';     
+            echo '<script>location.href= "../login.php";</script>';     
         }  
     }  
 ?>  

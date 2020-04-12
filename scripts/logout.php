@@ -5,5 +5,5 @@
 
     echo '<script>alert("You are now logged out.")</script>';
     /* Redirect browser */  
-    echo '<script>location.href= "../login.html";</script>';      
+    echo '<script>location.href= "../login.php";</script>';      
 ?>

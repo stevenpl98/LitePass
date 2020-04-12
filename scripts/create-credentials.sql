@@ -3,5 +3,5 @@ CREATE TABLE IF NOT EXISTS `credentials` (
   `siteApp` text(200) NOT NULL, 
   `user` varchar(200) NOT NULL,  
   `password` varchar(200) NOT NULL, 
-  PRIMARY KEY (`email`)  
+  PRIMARY KEY (`siteApp`)  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1; 

@@ -27,14 +27,16 @@
             {  
                 echo '<script>alert("Acccount Succesfully Added!")</script>';
                 /* Redirect browser */  
-                //echo '<script>location.href= "../home.php";</script>';  
+                echo '<script>location.href= "../home.php";</script>';  
             }
             //not complete 
             else 
-            {  
-                echo '<script>alert("Failure!")</script>';
+            { 
+                //echo $conn-error;
+                echo '<script>alert("Failure! Maybe Site/App name already exists!")</script>';
+                
                 /* Redirect browser */  
-                //echo '<script>location.href= "../home.php";</script>';  
+                echo '<script>location.href= "../home.php";</script>';  
             }  
         }
         close_db($conn);  

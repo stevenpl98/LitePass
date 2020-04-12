@@ -41,7 +41,7 @@
             {  
                 echo '<script>alert("User not found!")</script>';
                 /* Redirect browser */  
-                echo '<script>location.href= "../login.html";</script>';
+                echo '<script>location.href= "../login.php";</script>';
             }  
             close_db($conn);
         } 
@@ -50,7 +50,7 @@
         {  
             echo "All fields are required!";  
             /* Redirect browser */  
-            header("Location: ../login.html");  
+            header("Location: ../login.php");  
         }  
     }  
 ?>
